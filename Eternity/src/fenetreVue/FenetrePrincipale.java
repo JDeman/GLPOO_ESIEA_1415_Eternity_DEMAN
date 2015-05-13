@@ -70,7 +70,7 @@ public class FenetrePrincipale extends JFrame implements ActionListener {
 			
 		barMenu = new JMenuBar();
 			
-		restart = new JMenu("Recommencer");
+		restart = new JMenu("Revenir au menu");
 			
 		barMenu.add(restart);
 			
