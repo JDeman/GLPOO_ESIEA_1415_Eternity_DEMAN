@@ -15,7 +15,7 @@ public class FenetrePrincipale extends JFrame implements ActionListener {
 
 		private JPanel espJeu;
 		private JMenuBar barMenu;
-		private JMenu lancer, quitter;
+		private JMenu restart, quitter;
 		private gameArea terrainJeu;
 		private stockArea terrainStock;
 	
@@ -70,9 +70,9 @@ public class FenetrePrincipale extends JFrame implements ActionListener {
 			
 		barMenu = new JMenuBar();
 			
-		lancer = new JMenu("Jouer");
+		restart = new JMenu("Recommencer");
 			
-		barMenu.add(lancer);
+		barMenu.add(restart);
 			
 		quitter = new JMenu("Quitter");
 		barMenu.add(quitter);
