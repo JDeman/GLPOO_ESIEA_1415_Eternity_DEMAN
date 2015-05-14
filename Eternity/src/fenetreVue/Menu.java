@@ -4,9 +4,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import java.io.*;
 
@@ -23,39 +22,42 @@ public class Menu extends JFrame implements ActionListener {
 	private JButton jouer;
 	private JButton charger;
 	private JButton quitter;
-	
-
 
 	  public Menu(){
 	    this.setTitle("Menu");
-	    this.setSize(600, 300);
+	    this.setSize(1000, 800);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    this.setLocationRelativeTo(null);
 	    choix();
-	    
-	    this.setContentPane(boutton);
+	   
+	    this.setContentPane(new ImgFond());
 	    this.setVisible(true);
 	  }      
-	
+	 
+	  
 	public void choix(){
 		
 		boutton = new JPanel();
 		boutton.setBounds(0, 0, 300, 200);
-		
+
 		jouer();
 		charger();
 		quitter();
 		
 		boutton.add(jouer);
 		boutton.add(charger);
-		boutton.add(quitter);
-		
+		boutton.add(quitter);		
 	}
 
 	public void jouer(){
 		jouer = new JButton("Jouer");
 		jouer.setPreferredSize(new Dimension(100, 50));
-	//	jouer.addActionListener(new Action_jouer());
+	/*	try{
+			Image img = ImageIO.read(getClass().getResource("/Images/p1.jpg"));
+			jouer.setIcon(new ImageIcon(img));
+		}
+		catch (IOException ex) {}*/
+		//jouer.addActionListener(new Action_jouer());
 	}
 	
 	public void charger(){
@@ -125,3 +127,21 @@ class Action_quit extends Menu implements ActionListener{
 
 }
 
+class ImgFond extends JPanel{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public void paintComponent(Graphics g){
+			try {
+		      Image img = ImageIO.read(getClass().getResource("/Images/p1.jpg"));
+		      //g.drawImage(img, 0, 0, this);
+		      //Pour une image de fond
+		      g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+		    } catch (IOException e) {
+		      e.printStackTrace();
+		    }                
+	} 
+}
