@@ -83,64 +83,52 @@ class Panneau extends JPanel{
 			jouer.setIcon(new ImageIcon(img));
 		}
 		catch (IOException ex) {}*/
-		//jouer.addActionListener(new Action_jouer());
+		jouer.addActionListener(new Action_jouer());
+	}
+	class Action_jouer implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			FenetrePrincipale fenetre = new FenetrePrincipale();
+			fenetre.setVisible(true);
+		}
+
 	}
 	
 	public void charger(){
 		charger = new JButton("Charger");
 		charger.setPreferredSize(new Dimension(100, 50));
-		//charger.addActionListener(new Action_load());
+		charger.addActionListener(new Action_load());
+	}
+	class Action_load implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			//System.out.println("Test3");
+		}
+
 	}
 	
 	public void quitter(){
 		quitter = new JButton("Quitter");
 		quitter.setPreferredSize(new Dimension(100, 50));
-		//quitter.addActionListener(new Action_quit());
+		quitter.addActionListener(new Action_quit());
+	}
+	class Action_quit implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			System.exit(0);
+		}
 	}
 
 }
 
-class Action_jouer extends Menu implements ActionListener{
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println("Test2");
-	}
 
-}
 
-class Action_load extends Menu implements ActionListener{
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println("Test3");
-	}
-
-}
-
-class Action_quit extends Menu implements ActionListener{
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println("Test4");
-	}
-
-}
