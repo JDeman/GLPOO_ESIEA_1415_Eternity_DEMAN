@@ -23,7 +23,7 @@ public class stockArea extends JPanel {
 	//Random rd = new Random();
 	int rotation = 4 /*+rd.nextInt(4)*/;
 	int numPiece = 0 /*+rd.nextInt(16)*/;
-	
+	int i = 0, j = 0;
 	
 	public stockArea() {
 		
@@ -41,14 +41,14 @@ public class stockArea extends JPanel {
 	public void creaStockArea(){
 		
 		terrain = new JButton [4][4];
-		int i = 0, j = 0;
+		//int i = 0, j = 0;
 		ButtonMvt mouvement = new ButtonMvt();
 		
 		for (i = 0; i < terrain.length; i++) {
 			for (j = 0; j < terrain.length; j++) {
 				
 				numPiece++;
-				terrain[i][j] = new JButton(/*new ImageIcon("p" + numPiece + ".jpg")*/);
+				terrain[i][j] = new JButton();
 				
 				try {
 					Image img = ImageIO.read(getClass().getResource("/Images/p" + numPiece + "r" + rotation + ".jpg"));
@@ -78,9 +78,6 @@ public class stockArea extends JPanel {
 	
 	
 	class ButtonMvt implements KeyListener, MouseListener, ActionListener {
-		
-		int i, j, numPiece;
-		
 		
 		public void actionPerformed ( ActionEvent e) {
 			
@@ -148,6 +145,9 @@ public class stockArea extends JPanel {
 		@Override
 		public void mouseEntered(MouseEvent e) {
 			// TODO Auto-generated method stub
+			
+			
+			
 		}
 
 		@Override
