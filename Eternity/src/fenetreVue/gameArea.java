@@ -47,15 +47,13 @@ public class gameArea extends JPanel {
 		
 		for (int i = 0; i < terrain.length; i++) {
 			for (int j = 0; j < terrain.length; j++) {
-				
-				numPiece++;
-				
+								
 				terrain[i][j]= new JButton();
 				terrain[i][j].setPreferredSize(new Dimension(120, 120));
 				//terrain[i][j].setBounds(x, y, 158, 158);
 				terrain[i][j].setBackground(Color.DARK_GRAY);
 				
-				terrain[i][j].setActionCommand( i + ";" + j + ";" + numPiece);
+				terrain[i][j].setActionCommand( i + ";" + j);
 				terrain[i][j].addActionListener(mouvement2);
 				terrain[i][j].addKeyListener(mouvement2);
 				terrain[i][j].addMouseListener(mouvement2);
@@ -67,7 +65,7 @@ public class gameArea extends JPanel {
 		}
 		
 	}
-	
+		
 	
 class ButtonMvt2 implements KeyListener, MouseListener, ActionListener {
 		
@@ -75,7 +73,6 @@ class ButtonMvt2 implements KeyListener, MouseListener, ActionListener {
 			
 			 i = new Integer(e.getActionCommand().split(";")[0]);
 			 j = new Integer(e.getActionCommand().split(";")[1]);
-			 numPiece = new Integer(e.getActionCommand().split(";")[2]);
 			
 			System.out.println("Coordonnées: (" + i + "," + j + ")" );
 			System.out.println("Piece numero: (" + numPiece + ")" );

@@ -26,7 +26,7 @@ public class FenetrePrincipale extends JFrame {
 	private JMenuBar barMenu;
 	private JMenu option;
 	private JMenuItem restart, quitter;
-	private gameArea terrainJeu;
+	//private gameArea terrainJeu;
 	private stockArea terrainStock;
 
 	// Creation de la fenetre principale
@@ -53,14 +53,14 @@ public class FenetrePrincipale extends JFrame {
 		espJeu.setBounds(0, 0, 1200, 600);
 		espJeu.setLayout(new BorderLayout());
 
-		espJeu.add(terrainJeu, BorderLayout.EAST);
+		//espJeu.add(terrainJeu, BorderLayout.EAST);
 		espJeu.add(terrainStock, BorderLayout.WEST);
 	}
 
 	// Affichage du terrain de jeu
 	public void buildgameArea() {
 
-		terrainJeu = new gameArea();
+		//terrainJeu = new gameArea();
 	}
 
 	// Affichage du terrain de stockage des cartes
