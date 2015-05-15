@@ -14,8 +14,8 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Menu menu = new Menu();
-		menu.setVisible(true);
-		
+		//L'affichage se fait dans la class Menu
+		//menu.setVisible(true);
 		
 		//FenetrePrincipale fenetre = new FenetrePrincipale();
 		//fenetre.setVisible(true);
