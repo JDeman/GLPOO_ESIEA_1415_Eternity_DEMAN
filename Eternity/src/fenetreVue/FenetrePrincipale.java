@@ -33,7 +33,7 @@ public class FenetrePrincipale extends JFrame {
 	public FenetrePrincipale() {
 
 		fenetrePrincipale.setTitle("Jeu Eternity - Menu principale");
-		fenetrePrincipale.setSize(1200, 700);
+		fenetrePrincipale.setSize(800, 800);
 		fenetrePrincipale.setLocationRelativeTo(null);
 		fenetrePrincipale.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		menu();
@@ -50,7 +50,7 @@ public class FenetrePrincipale extends JFrame {
 
 		espJeu = new JPanel();
 		espJeu.setBackground(Color.LIGHT_GRAY);
-		espJeu.setBounds(0, 0, 1200, 600);
+		espJeu.setBounds(0, 0, 800, 800);
 		espJeu.setLayout(new BorderLayout());
 
 		//espJeu.add(terrainJeu, BorderLayout.EAST);

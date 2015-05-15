@@ -73,7 +73,7 @@ public class stockArea extends JPanel {
 				setFocusable(true);
 				
 				
-				System.out.println("On intègre la piece : " + numPiece + " de rotation " + rotation);
+				System.out.println("On integre la piece : " + numPiece + " de rotation " + rotation);
 
 			}
 		}
@@ -92,7 +92,7 @@ public class stockArea extends JPanel {
 			 
 			 numPiece = new Integer(e.getActionCommand().split(";")[2]);
 			
-			System.out.println("Coordonnées: (" + i + "," + j + ")" );
+			System.out.println("Coordonnees: (" + i + "," + j + ")" );
 			System.out.println("Piece numero: (" + numPiece + ")" );
 			
 		}
@@ -104,7 +104,7 @@ public class stockArea extends JPanel {
 
 		public void keyPressed(KeyEvent e) {
 			
-			System.out.println("Vous avez appuyé sur la touche "+ e.getKeyCode());
+			System.out.println("Vous avez appuye sur la touche "+ e.getKeyCode());
 					
 					switch ( e.getKeyCode() ) {
 								
@@ -127,7 +127,7 @@ public class stockArea extends JPanel {
 							
 							i2 = i;
 							j2 = j;
-							System.out.println("Coordonnées temporaires: (" + i2 + "," + j2 + ")" );
+							System.out.println("Coordonnees temporaires: (" + i2 + "," + j2 + ")" );
 							System.out.println("Piece numero: (" + numPiece2 + ")" );
 						
 							switcheurFou = true;

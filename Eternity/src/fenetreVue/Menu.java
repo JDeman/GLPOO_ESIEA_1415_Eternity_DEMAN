@@ -51,7 +51,7 @@ class Panneau extends JPanel{
 	//Image de fond
 	public void paintComponent(Graphics g){
 		try {
-			Image img = ImageIO.read(getClass().getResource("/Images/index.jpg"));
+			Image img = ImageIO.read(getClass().getResource("/Images/logo.jpg"));
 			g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
 		} catch (IOException e) {
 			e.printStackTrace();
