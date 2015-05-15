@@ -1,0 +1,6 @@
+type(Bord/Face) id_face couleur_fond forme couleur_forme
+B 1 noir
+F 2 vert rond bleu
+F 3	violet zigzag orange
+F 4	bleu etoile rouge
+F 5	jaune lignes rouge
