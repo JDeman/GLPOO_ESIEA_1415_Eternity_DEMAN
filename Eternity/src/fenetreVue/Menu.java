@@ -11,29 +11,23 @@ import java.io.*;
 
 @SuppressWarnings("unused")
 
-public class Menu extends JFrame implements ActionListener {
+public class Menu extends JFrame {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	public static JFrame menu = new JFrame();
+	
 	  public Menu(){
-	    this.setTitle("Menu");
-	    this.setSize(500, 300);
-	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    this.setLocationRelativeTo(null);
+	    menu.setTitle("Menu");	
+	    menu.setSize(500, 300);
+	    menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    menu.setLocationRelativeTo(null);
 	    
-	    this.setContentPane(new Panneau());
-	    this.setVisible(true);
+	    menu.setContentPane(new Panneau());
+	    menu.setVisible(true);
 	  }      
-	 
-	  
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println("Test1");
-	}
 	
 }
 
@@ -90,10 +84,9 @@ class Panneau extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			FenetrePrincipale fenetre = new FenetrePrincipale();
-			fenetre.setVisible(true);
+			new FenetrePrincipale();
+			Menu.menu.dispose();
 		}
-
 	}
 	
 	public void charger(){
@@ -124,10 +117,7 @@ class Panneau extends JPanel{
 			System.exit(0);
 		}
 	}
-
 }
-
-
 
 
 

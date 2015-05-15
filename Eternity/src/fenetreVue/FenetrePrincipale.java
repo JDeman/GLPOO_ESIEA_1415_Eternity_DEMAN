@@ -7,30 +7,37 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
+import fenetreVue.Menu;
 
-@SuppressWarnings("serial")
-public class FenetrePrincipale extends JFrame implements ActionListener {
+public class FenetrePrincipale extends JFrame {
 
+		/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static JFrame fenetrePrincipale = new JFrame();
 		private JPanel espJeu;
 		private JMenuBar barMenu;
-		private JMenu restart, quitter;
+		private JMenu option;
+		private JMenuItem restart, quitter;
 		private gameArea terrainJeu;
 		private stockArea terrainStock;
 	
 	// Creation de la fenetre principale
 	public FenetrePrincipale() {
 		
-		super("Jeu Eternity - Menu principale");
-		setSize(1200, 700);
-		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		fenetrePrincipale.setTitle("Jeu Eternity - Menu principale");
+		fenetrePrincipale.setSize(1200, 700);
+		fenetrePrincipale.setLocationRelativeTo(null);
+		fenetrePrincipale.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		menu();
 		fenetreJeu();
-		setContentPane(espJeu);
-		setJMenuBar(barMenu);
-		setVisible(true);
+		fenetrePrincipale.setContentPane(espJeu);
+		fenetrePrincipale.setJMenuBar(barMenu);
+		fenetrePrincipale.setVisible(true);
 		
 	}
 		
@@ -69,25 +76,48 @@ public class FenetrePrincipale extends JFrame implements ActionListener {
 	public void menu() {
 			
 		barMenu = new JMenuBar();
-			
-		restart = new JMenu("Revenir au menu");
-			
-		barMenu.add(restart);
-			
-		quitter = new JMenu("Quitter");
-		barMenu.add(quitter);
 		
-	}
+		option = new JMenu("Option");
+		barMenu.add(option);
+			
+		restart = new JMenuItem("Revenir au menu");
+		restart.addActionListener(new Back_menu());
+		option.add(restart);
+		
 
-	@Override
-	public void actionPerformed (ActionEvent e) {
-
-		System.exit(0);
+			
+		quitter = new JMenuItem("Quitter");
+		quitter.addActionListener(new Quitter());
+		option.add(quitter);
+		
 	}
 	
 	public void MouseClicked (ActionEvent e) {
 		
 	}
 
+	class Back_menu implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			new Menu();
+			fenetrePrincipale.dispose();	//enlève la fenetre principale
+			//menu.setVisible(true);
+		}
+	}
+	
+	class Quitter implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			System.exit(0);
+		}
+		
+	}
 
 }
+
+
+
