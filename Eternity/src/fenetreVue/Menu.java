@@ -98,6 +98,7 @@ class Panneau extends JPanel{
 		charger = new JButton("Charger");
 		charger.setPreferredSize(new Dimension(100, 50));
 		charger.addActionListener(new Action_load());
+		charger.setVisible(false);
 	}
 	
 	class Action_load implements ActionListener{
