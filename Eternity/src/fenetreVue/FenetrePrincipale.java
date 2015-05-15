@@ -81,7 +81,6 @@ public class FenetrePrincipale extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed (ActionEvent e) {
-
 		System.exit(0);
 	}
 	

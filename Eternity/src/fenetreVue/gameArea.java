@@ -12,14 +12,6 @@ public class gameArea extends JPanel {
 	
 	JButton [][]terrain;
 	
-	/*//@Override
-    public void paintComponent(Graphics g){
-		super.paintComponent(g);
-		ImageIcon icon = new ImageIcon("p1.jpg");
-        g.drawImage(icon.getImage(), 0, 0, this.getWidth(), this.getHeight(), this);       
-        
-  }*/
-	
 	public gameArea() {
 		setPreferredSize(new Dimension(500, 400));
 		creaArea();
